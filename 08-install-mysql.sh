@@ -8,12 +8,12 @@ if [ $USERID -ne 0 ]
 then
     echo "ERROR:: Please run this script with root access"
     exit 1
-else
-   echo "INFO:: You are root user"
+# else
+#     echo "INFO:: You are root user"
 fi
 
 # it is our responsibility again to check installation is success or not
-sudo yum install mysql -y
+yum install mysql -y
 
 if [ $? -ne 0 ]
 then
@@ -23,7 +23,7 @@ else
     echo "Installation of mysql is success"
 fi
 
-sudo yum install postfix -y
+yum install postfix -y
 
 if [ $? -ne 0 ]
 then
