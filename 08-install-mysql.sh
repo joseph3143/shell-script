@@ -13,7 +13,7 @@ then
 fi
 
 # it is our responsibility again to check installation is success or not
-yum install mysql -y
+sudo yum install mysql -y
 
 if [ $? -ne 0 ]
 then
@@ -23,7 +23,7 @@ else
     echo "Installation of mysql is success"
 fi
 
-yum install postfix -y
+sudo yum install postfix -y
 
 if [ $? -ne 0 ]
 then
